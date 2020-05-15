@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
          SimpleAdapter sAdapter = new SimpleAdapter(this, values, R.layout.item,
                 from, to);
         lvSimple = (ListView) findViewById(R.id.list);
+        lvSimple.setAdapter(sAdapter);
         return sAdapter;
     }
 
